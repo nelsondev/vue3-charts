@@ -25,8 +25,6 @@ export default (dataKeys: [string, string], props = { stacked: false, type: 'lin
           }
         })
         .filter((p) => !isNaN(p.x) && !isNaN(p.y))
-
-      console.log(res)
       return res
     } else if (chart.config.direction === 'vertical') {
       return values
@@ -57,7 +55,6 @@ export default (dataKeys: [string, string], props = { stacked: false, type: 'lin
     chart.updates,
     () => {
       update()
-      console.log('update')
     },
     { immediate: true }
   )
